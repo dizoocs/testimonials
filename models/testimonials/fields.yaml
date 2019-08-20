@@ -1,0 +1,21 @@
+fields:
+    image:
+        label: 'dizoo.testimonials::lang.strings.testimonial_image'
+        mode: image
+        useCaption: 0
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+    name:
+        label: 'dizoo.testimonials::lang.strings.testimonial_name'
+        span: left
+        required: 1
+        type: text
+    quote:
+        label: 'dizoo.testimonials::lang.strings.testimonial_quote'
+        size: large
+        span: left
+        required: 1
+        type: textarea

@@ -1,0 +1,5 @@
+title: Testimonials
+modelClass: Dizoo\Testimonials\Models\Testimonials
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar
