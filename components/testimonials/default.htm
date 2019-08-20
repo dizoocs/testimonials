@@ -11,7 +11,11 @@
         <div id="testim-content" class="cont">
             {% for testimonial in testimonials %}
             <div{% if loop.first %} class="active"{% endif %}>
-                <div class="img"><img src="{{ testimonial.image.thumb(100,100,{'mode':'crop'}) }}" alt="{{ testimonial.name }}"></div>
+                {% if testimonial.image %}
+                <div class="img">
+                    <img src="{{ testimonial.image.thumb(100,100,{'mode':'crop'}) }}" alt="{{ testimonial.name }}">
+                </div>
+                {% endif %}
                 <h2>{{ testimonial.name }}</h2>
                 <p>{{ testimonial.quote }}</p>
             </div>
