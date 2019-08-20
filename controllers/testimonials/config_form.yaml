@@ -1,0 +1,17 @@
+name: Testimonials
+modelClass: Dizoo\Testimonials\Models\Testimonials
+form: $/dizoo/testimonials/models/testimonials/fields.yaml
+defaultRedirect: dizoo/testimonials/testimonials
+create:
+    title: 'dizoo.testimonials::lang.strings.manage_create'
+    redirect: 'dizoo/testimonials/testimonials/update/:id'
+    redirectClose: dizoo/testimonials/testimonials
+    flashSave: 'dizoo.testimonials::lang.strings.message_saved'
+update:
+    title: 'dizoo.testimonials::lang.strings.message_edit'
+    redirect: dizoo/testimonials/testimonials
+    redirectClose: dizoo/testimonials/testimonials
+    flashSave: 'dizoo.testimonials::lang.strings.message_saved'
+    flashDelete: 'dizoo.testimonials::lang.strings.message_deleted'
+preview:
+    title: 'dizoo.testimonials::lang.strings.manage_view'

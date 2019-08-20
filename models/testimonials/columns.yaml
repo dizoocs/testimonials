@@ -1,0 +1,13 @@
+columns:
+    name:
+        label: 'dizoo.testimonials::lang.strings.testimonial_name'
+        type: text
+        searchable: true
+    quote:
+        label: 'dizoo.testimonials::lang.strings.testimonial_quote'
+        type: text
+        searchable: true
+    sort_order:
+        label: 'dizoo.testimonials::lang.strings.order'
+        type: number
+        sortable: true

@@ -1,0 +1,17 @@
+plugin:
+    name: 'dizoo.testimonials::lang.plugin.name'
+    description: 'dizoo.testimonials::lang.plugin.description'
+    author: Dizoo
+    icon: oc-icon-quote-right
+    homepage: ''
+permissions:
+    manage-testimonials:
+        tab: 'dizoo.testimonials::lang.strings.manage_title'
+        label: 'dizoo.testimonials::lang.strings.manage_label'
+navigation:
+    main-menu-item:
+        label: 'dizoo.testimonials::lang.plugin.name'
+        url: dizoo/testimonials/testimonials
+        icon: icon-quote-right
+        permissions:
+            - manage-testimonials
