@@ -5,3 +5,5 @@
     - builder_table_create_dizoo_testimonials_main.php
 1.0.3:
     - 'Made image optional'
+1.1.0:
+    - 'Add the option to disable the JS and CSS file'

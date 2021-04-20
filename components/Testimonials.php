@@ -19,8 +19,12 @@ class Testimonials extends ComponentBase {
         $testimonials = $this->getTestimonials();
         if($testimonials->isNotEmpty()) {
             $this->page['testimonials'] = $testimonials;
-            $this->addCss('/plugins/dizoo/testimonials/assets/css/testimonial-slider.css');
-            $this->addJs('/plugins/dizoo/testimonials/assets/js/testimonial-slider.js');
+            if($this->property('css')) {
+                $this->addCss('/plugins/dizoo/testimonials/assets/css/testimonial-slider.css');
+            }
+            if ($this->property('scripting')) {
+                $this->addJs('/plugins/dizoo/testimonials/assets/js/testimonial-slider.js');
+            }
         } else {
             $this->page['testimonials'] = false;
         }
@@ -49,6 +53,18 @@ class Testimonials extends ComponentBase {
                  'type'              => 'string',
                  'validationPattern' => '^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$',
                  'validationMessage' => 'Please fill in a valid hex code with the #'
+            ],
+            'scripting' => [
+                'title'             => 'Include Scripting',
+                'description'       => 'If you want to use your own scripting uncheck this',
+                'default'           => true,
+                'type'              => 'checkbox'
+            ],
+            'css' => [
+                'title'             => 'Include CSS',
+                'description'       => 'If you want to use custom CSS uncheck this',
+                'default'           => true,
+                'type'              => 'checkbox'
             ]
         ];
     }
