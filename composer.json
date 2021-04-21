@@ -1,0 +1,8 @@
+{
+    "name": "dizoo/testimonials-plugin",
+    "description": "This plugin adds a customizable testimonial slider to your website. You can change the background and text color of the slide to make it fit into any website.",
+    "type": "october-plugin",
+    "require": {
+        "composer/installers": "^1.10"
+    }
+}
