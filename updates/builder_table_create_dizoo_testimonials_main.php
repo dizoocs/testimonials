@@ -7,14 +7,15 @@ class BuilderTableCreateDizooTestimonialsMain extends Migration
 {
     public function up()
     {
-        Schema::create('dizoo_testimonials_main', function($table)
-        {
-            $table->engine = 'InnoDB';
-            $table->increments('id')->unsigned();
-            $table->string('name', 30);
-            $table->string('quote', 255);
-            $table->integer('sort_order')->nullable();
-        });
+        if (!Schema::hasTable('dizoo_testimonials_main')) {
+            Schema::create('dizoo_testimonials_main', function ($table) {
+                $table->engine = 'InnoDB';
+                $table->increments('id')->unsigned();
+                $table->string('name', 30);
+                $table->string('quote', 255);
+                $table->integer('sort_order')->nullable();
+            });
+        }
     }
     
     public function down()
